@@ -1,0 +1,167 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="FirstProjectAvalonia.MainWindow"
+        Title="FirstProjectAvalonia">
+    
+        <StackPanel Orientation="Vertical">
+            <Grid VerticalAlignment="Top" HorizontalAlignment="Center">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.ColumnSpan="0" Grid.Row="0" >
+                <Border Background="Gainsboro"
+                    BorderBrush="Black"
+                    BorderThickness="2"
+                    CornerRadius="5"
+                    BoxShadow="10 10 10 5 DarkGray">
+                        <TextBlock x:Name="message"
+                        Margin="5"
+                        FontSize="20">
+                        Box with a drop shadow</TextBlock>
+                </Border>
+
+                <Button
+                    x:Name="clickMe"
+                    Click = "clickMeHandlerIncrement"
+                    Background="Green"
+                    Foreground="White"
+                    FontSize="20"
+                    Margin="2"
+                    Width="40"
+                    Content="Increment"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Grid.ColumnSpan="0" Grid.Row="0">
+                </Button> 
+                <!--Lines 9-46 above show how I made a button for the increment.-->   
+            </StackPanel>
+
+            <StackPanel Grid.ColumnSpan="1" Grid.Row="1" >
+                <Border Background="Gainsboro"
+                    BorderBrush="Black"
+                    BorderThickness="2"
+                    CornerRadius="5"
+                    BoxShadow="10 10 10 5 DarkGray">
+                        <TextBlock x:Name="message"
+                        Margin="5"
+                        FontSize="20">
+                        Box with a drop shadow</TextBlock>
+                </Border>
+
+                <Button
+                    x:Name="clickMe"
+                    Click = "clickMeHandlerDecrement"
+                    Background="Green"
+                    Foreground="White"
+                    FontSize="20"
+                    Margin="2"
+                    Width="40"
+                    Content="Decrement"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Grid.ColumnSpan="1" Grid.Row="1">
+                </Button> 
+                <!--Lines 52-77 above show how I made a button for the decrement.-->   
+            </StackPanel>
+
+            <StackPanel Grid.ColumnSpan="2" Grid.Row="2" >
+                <Border Background="Gainsboro"
+                    BorderBrush="Black"
+                    BorderThickness="2"
+                    CornerRadius="5"
+                    BoxShadow="10 10 10 5 DarkGray">
+                        <TextBlock x:Name="message"
+                        Margin="5"
+                        FontSize="20">
+                        Box with a drop shadow</TextBlock>
+                </Border>
+
+                <Button
+                    x:Name="clickMe"
+                    Click = "clickMeHandlerReset"
+                    Background="Red"
+                    Foreground="White"
+                    FontSize="20"
+                    Margin="2"
+                    Width="40"
+                    Content="Reset"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Grid.ColumnSpan="2" Grid.Row="2">
+                </Button> 
+                <!--Lines 80-104 above show how I made a button for the reset.-->
+            </StackPanel>
+
+            <StackPanel Grid.ColumnSpan="3" Grid.Row="3" >
+                <Border Background="Gainsboro"
+                    BorderBrush="Black"
+                    BorderThickness="2"
+                    CornerRadius="5"
+                    BoxShadow="10 10 10 5 DarkGray">
+                        <TextBlock x:Name="message"
+                        Margin="5"
+                        FontSize="20">
+                        Box with a drop shadow</TextBlock>
+                </Border>
+
+                <TextBlock
+                    x:Name="counterDisplay"
+                    Background="White"
+                    Foreground="Black"
+                    FontSize="20"
+                    Margin="2"
+                    Width="40"
+                    Text="Celsius"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Grid.ColumnSpan="3" Grid.Row="3">
+                </TextBlock> 
+                <!--Lines 107-131 above show how I made a textblock for the counter display. This shows that the temp that will be calculated will be in Celsius. The temp that the user incremented/decremented is in Farenheight.-->
+            </StackPanel>
+
+            <StackPanel Grid.ColumnSpan="3" Grid.Row="3" >
+                <Border Background="Gainsboro"
+                    BorderBrush="Black"
+                    BorderThickness="2"
+                    CornerRadius="5"
+                    BoxShadow="10 10 10 5 DarkGray">
+                        <TextBlock x:Name="message"
+                        Margin="5"
+                        FontSize="20">
+                        Box with a drop shadow</TextBlock>
+                </Border>
+
+                <TextBlock
+                    x:Name="counterDisplay"
+                    Background="White"
+                    Foreground="Black"
+                    FontSize="20"
+                    Margin="2"
+                    Width="40"
+                    Text="Temp"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Grid.ColumnSpan="3" Grid.Row="3">
+                </TextBlock> 
+                <!--Lines 137-162 above show how I made a textblock for the calculation itself. It will show the product of the F to C conversion.-->
+            </StackPanel>
+                <!--The layout is complete for the project. I have decrement, increment, and reset buttons, as well as a textblock for Celsius and a results box showing the conversion.-->
+            </Grid>
+
+        </StackPanel>
+</Window>
