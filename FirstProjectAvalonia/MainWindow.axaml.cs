@@ -12,39 +12,26 @@ public partial class MainWindow : Window
     public void clickMeHandlerIncrement(object sender, RoutedEventArgs e)
     {
         if (!double.TryParse(tb_temperature.Text, out double fahrenheit))
-    {
-        fahrenheit = 32;  // default if box is empty or invalid
-    }
-    tb_temperature.Text = (fahrenheit + 1).ToString("F1");
+        {
+            fahrenheit = 32;
+        }
 
-        message.Text =
-            message.Text == "Increment"
-                ? "Increment"
-                : "Increment";
+        tb_temperature.Text = (fahrenheit + 1).ToString("F1");
     }
+
     public void clickMeHandlerDecrement(object sender, RoutedEventArgs e)
     {
         if (!double.TryParse(tb_temperature.Text, out double fahrenheit))
-    {
-        fahrenheit = 32;  // default if box is empty or invalid
+        {
+            fahrenheit = 32;
+        }
+
+        tb_temperature.Text = (fahrenheit - 1).ToString("F1");
     }
-    tb_temperature.Text = (fahrenheit - 1).ToString("F1");
-        message.Text =
-            message.Text == "Decrement"
-                ? "Decrement"
-                : "Decrement";
-    }
+
     public void clickMeHandlerReset(object sender, RoutedEventArgs e)
     {
-        if (!double.TryParse(tb_temperature.Text, out double fahrenheit))
-        {
-            fahrenheit = 32;  // default if box is empty or invalid
-        }
-        tb_temperature.Text = fahrenheit.ToString("F1");
-        message.Text =
-            message.Text == "Reset"
-                ? "Reset"
-                : "Reset";
+        tb_temperature.Text = "32";
     }
     //Now we have clickMeHandlers for the Increment, Reset, and Decrement buttons, although I still haven't designed what the buttons will do.
     private void TbTemperature_TextChanged(object? sender, TextChangedEventArgs e)
