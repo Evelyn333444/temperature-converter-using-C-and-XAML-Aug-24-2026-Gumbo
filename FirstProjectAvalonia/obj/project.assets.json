@@ -1616,16 +1616,16 @@
     ]
   },
   "packageFolders": {
-    "/Users/evelyn/.nuget/packages/": {}
+    "/var/folders/_p/g2j6q2t15v3b2_l850yxjr9c0000gn/T/cursor-sandbox-cache/251ab4bcafb564553046ef4c104f8469/nuget": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/evelyn/Desktop/FirstProjectAvalonia/FirstProjectAvalonia/FirstProjectAvalonia.csproj",
+      "projectUniqueName": "/Users/evelyn/Desktop/avalonia projects/FirstProjectAvalonia/FirstProjectAvalonia/FirstProjectAvalonia.csproj",
       "projectName": "FirstProjectAvalonia",
-      "projectPath": "/Users/evelyn/Desktop/FirstProjectAvalonia/FirstProjectAvalonia/FirstProjectAvalonia.csproj",
-      "packagesPath": "/Users/evelyn/.nuget/packages/",
-      "outputPath": "/Users/evelyn/Desktop/FirstProjectAvalonia/FirstProjectAvalonia/obj/",
+      "projectPath": "/Users/evelyn/Desktop/avalonia projects/FirstProjectAvalonia/FirstProjectAvalonia/FirstProjectAvalonia.csproj",
+      "packagesPath": "/var/folders/_p/g2j6q2t15v3b2_l850yxjr9c0000gn/T/cursor-sandbox-cache/251ab4bcafb564553046ef4c104f8469/nuget",
+      "outputPath": "/Users/evelyn/Desktop/avalonia projects/FirstProjectAvalonia/FirstProjectAvalonia/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/evelyn/.nuget/NuGet/NuGet.Config"

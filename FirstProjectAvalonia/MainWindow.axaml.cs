@@ -1,6 +1,5 @@
 using Avalonia.Controls;
 using Avalonia.Interactivity;
-using Avalonia.Media;
 
 namespace FirstProjectAvalonia;
 
@@ -12,6 +11,12 @@ public partial class MainWindow : Window
     }
     public void clickMeHandlerIncrement(object sender, RoutedEventArgs e)
     {
+        if (!double.TryParse(tb_temperature.Text, out double fahrenheit))
+    {
+        fahrenheit = 32;  // default if box is empty or invalid
+    }
+    tb_temperature.Text = (fahrenheit + 1).ToString("F1");
+
         message.Text =
             message.Text == "Increment"
                 ? "Increment"
@@ -19,6 +24,11 @@ public partial class MainWindow : Window
     }
     public void clickMeHandlerDecrement(object sender, RoutedEventArgs e)
     {
+        if (!double.TryParse(tb_temperature.Text, out double fahrenheit))
+    {
+        fahrenheit = 32;  // default if box is empty or invalid
+    }
+    tb_temperature.Text = (fahrenheit - 1).ToString("F1");
         message.Text =
             message.Text == "Decrement"
                 ? "Decrement"
@@ -26,6 +36,11 @@ public partial class MainWindow : Window
     }
     public void clickMeHandlerReset(object sender, RoutedEventArgs e)
     {
+        if (!double.TryParse(tb_temperature.Text, out double fahrenheit))
+        {
+            fahrenheit = 32;  // default if box is empty or invalid
+        }
+        tb_temperature.Text = fahrenheit.ToString("F1");
         message.Text =
             message.Text == "Reset"
                 ? "Reset"
@@ -34,13 +49,14 @@ public partial class MainWindow : Window
     //Now we have clickMeHandlers for the Increment, Reset, and Decrement buttons, although I still haven't designed what the buttons will do.
     private void TbTemperature_TextChanged(object? sender, TextChangedEventArgs e)
     {
-    if (!double.TryParse(tb_temperature.Text, out double fahrenheit))
-    {
-        counterDisplay.Text = "Temp";  // or "?" if input isn't a number yet
-        return;
+        if (!double.TryParse(tb_temperature.Text, out double fahrenheit))
+        {
+            counterDisplay.Text = "Temp";
+            return;
+        }
+
+        double celsius = (fahrenheit - 32.0) * 5.0 / 9.0;
+        counterDisplay.Text = celsius.ToString("F1");
     }
-    double celsius = (fahrenheit - 32.0) * 5.0 / 9.0;
-    counterDisplay.Text = celsius.ToString("F1");
-    }
-    //Lines 35-44 show the calculation of the conversion taking place when the user types in a temp in F.
+    //Lines 51-61 show the calculation of the conversion taking place when the user types in a temp in F.
 }
