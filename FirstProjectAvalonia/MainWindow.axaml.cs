@@ -32,5 +32,15 @@ public partial class MainWindow : Window
                 : "Reset";
     }
     //Now we have clickMeHandlers for the Increment, Reset, and Decrement buttons, although I still haven't designed what the buttons will do.
-    
+    private void TbTemperature_TextChanged(object? sender, TextChangedEventArgs e)
+    {
+    if (!double.TryParse(tb_temperature.Text, out double fahrenheit))
+    {
+        counterDisplay.Text = "Temp";  // or "?" if input isn't a number yet
+        return;
+    }
+    double celsius = (fahrenheit - 32.0) * 5.0 / 9.0;
+    counterDisplay.Text = celsius.ToString("F1");
+    }
+    //Lines 35-44 show the calculation of the conversion taking place when the user types in a temp in F.
 }

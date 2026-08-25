@@ -120,7 +120,7 @@
                 </Border>
 
                 <TextBlock
-                    x:Name="counterDisplay"
+                    x:Name="celsiusDisplay"
                     Background="White"
                     Foreground="Black"
                     FontSize="20"
@@ -160,7 +160,19 @@
                 </TextBlock> 
                 <!--Lines 137-162 above show how I made a textblock for the calculation itself. It will show the product of the F to C conversion.-->
             </StackPanel>
-                <!--The layout is complete for the project. I have decrement, increment, and reset buttons, as well as a textblock for Celsius and a results box showing the conversion.-->
+
+            <StackPanel>
+                 <TextBox 
+                    x:Name="tb_temperature" 
+                    Grid.Row="2" 
+                    Grid.ColumnSpan="2"
+                    Text="This is a text box" 
+                    VerticalAlignment="Center" 
+                    Margin="5 0 " 
+                    TextChanged="TextBox_TextChanged" />
+            </StackPanel>   
+                <!--Lines 164-173 show the textbox I made so that users can input a number in Farenheight.-->
+                <!--The layout is complete for the project. I have decrement, increment, and reset buttons, as well as a textblock for Celsius and a results box showing the conversion.--> 
             </Grid>
 
         </StackPanel>
