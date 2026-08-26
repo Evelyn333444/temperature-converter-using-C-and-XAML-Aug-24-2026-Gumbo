@@ -55,6 +55,22 @@
                 <!--Lines 52-77 above show how I made a button for the decrement.-->   
             </StackPanel>
 
+            <StackPanel Grid.Column="1" Grid.Row="1" >
+                <Button
+                    Click = "clickMeHandlerDecrement"
+                    Background="Green"
+                    Foreground="White"
+                    FontSize="20"
+                    Margin="2"
+                    Width="175"
+                    Content="Decrement"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    >
+                </Button> 
+                <!--Lines 52-77 above show how I made a button for the decrement.-->   
+            </StackPanel>
+
             <StackPanel Grid.Column="2" Grid.Row="2" >
                 
                 <Button
@@ -72,23 +88,6 @@
                 <!--Lines 80-104 above show how I made a button for the reset.-->
             </StackPanel>
 
-            <StackPanel Grid.Column="3" Grid.Row="0" >
-
-                <TextBlock
-                    x:Name="celsiusDisplay"
-                    Background="White"
-                    Foreground="Black"
-                    FontSize="20"
-                    Margin="2"
-                    Width="100"
-                    Text="Celsius"
-                    VerticalAlignment="Center"
-                    HorizontalAlignment="Center"
-                    >
-                </TextBlock> 
-                <!--Lines 107-131 above show how I made a textblock for the counter display. This shows that the temp that will be calculated will be in Celsius. The temp that the user incremented/decremented is in Farenheight.-->
-            </StackPanel>
-
             <StackPanel Grid.Column="3" Grid.Row="1" >
 
                 <TextBlock
@@ -103,18 +102,18 @@
                     HorizontalAlignment="Center"
                     >
                 </TextBlock> 
-                <!--Lines 137-162 above show how I made a textblock for the calculation itself. It will show the product of the F to C conversion.-->
+                <!--Lines 75-90 above show how I made a textblock for the calculation itself. It will show the product of the F to C conversion.-->
             </StackPanel>
 
             <StackPanel Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="3">
                  <TextBox 
                     x:Name="tb_temperature" 
-                    Text="This is a text box" 
+                    Text="Temperature in Farenheight" 
                     VerticalAlignment="Center" 
                     Margin="5 0 " 
                     TextChanged="TbTemperature_TextChanged" />
             </StackPanel>   
-                <!--Lines 164-173 show the textbox I made so that users can input a number in Farenheight.-->
+                <!--Lines 92-99 show the textbox I made so that users can input a number in Farenheight.-->
                 <!--The layout is complete for the project. I have decrement, increment, and reset buttons, as well as a textblock for Celsius and a results box showing the conversion.--> 
             </Grid>
 
