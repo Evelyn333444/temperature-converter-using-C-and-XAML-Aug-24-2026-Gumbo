@@ -30,7 +30,7 @@
                     Foreground="White"
                     FontSize="20"
                     Margin="2"
-                    Width="175"
+                    Width="150"
                     Content="Increment"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Center"
@@ -46,7 +46,7 @@
                     Foreground="White"
                     FontSize="20"
                     Margin="2"
-                    Width="175"
+                    Width="150"
                     Content="Decrement"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Center"
@@ -63,7 +63,7 @@
                     Foreground="White"
                     FontSize="20"
                     Margin="2"
-                    Width="100"
+                    Width="80"
                     Content="Reset"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Center"
@@ -98,7 +98,7 @@
                     TextChanged="TbTemperature_TextChanged" />
             </StackPanel>   
                 <!--Lines 92-99 show the textbox I made so that users can input a number in Farenheight.-->
-                <!--The layout is complete for the project. I have decrement, increment, and reset buttons, as well as a textblock for Celsius and a results box showing the conversion.--> 
+                <!--The layout is complete for the project. I have decrement, increment, and reset buttons, as well as a results box showing the conversion.--> 
             </Grid>
 
         </StackPanel>
